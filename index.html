@@ -1,117 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VG Studio by Vinayak Goyal — Premium Software Consultancy & Full-Stack Web Engineering. Delivering high-impact digital solutions, custom business platforms, and motion-driven web applications." />
+  <meta name="theme-color" content="#07070b" />
+  <title>VG Studio — Software Consultancy & Web Engineering</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css?v=20260815-4" />
 </head>
-
 <body>
-    <!--Social icons-->
-    <div class="top-bar">
-        <div class="contact-info">
-            <a href="tel:+91 9410302461"><i class="fas fa-phone"></i>+91 9410302461</a>
-            <a href="vinayakgoyal2208@gmail.com"><i class="fas fa-envelope"></i> vinayakgoyal2208@gmail.com</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Grain Overlay -->
+  <div class="noise-layer"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="page-shell top-announcement-inner">
+      <div class="status-indicator">
+        <span class="live-pulse"></span>
+        <span>Accepting Select Client Engagements for Q3/Q4 2026</span>
+      </div>
+      <div class="top-meta">
+        <a href="mailto:vinayakgoyal2208@gmail.com"><i class="fas fa-envelope"></i> vinayakgoyal2208@gmail.com</a>
+        <span class="meta-sep">•</span>
+        <a href="tel:+919410302461"><i class="fas fa-phone-alt"></i> +91 9410302461</a>
+      </div>
     </div>
-    <!-- Header with Navigation and Hero Section -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Landing Page</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header id="header">
+    <nav class="navbar page-shell" aria-label="Main Navigation">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">VG</span>
+        <span class="logo-text">Studio<span class="dot">.</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Client Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Packages</a></li>
+        <li><a href="#contact" class="nav-cta">Book Consult</a></li>
+      </ul>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Client Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Packages</a></li>
+      <li><a href="#contact">Book Consult</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <p>vinayakgoyal2208@gmail.com</p>
+      <p>India • Global Remote Available</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-canvas"></canvas>
+      <div class="page-shell hero-container">
+        <div class="hero-tag reveal-tag">
+          <span class="badge-icon"><i class="fas fa-code"></i></span>
+          <span>Bespoke Web Development & Software Consultancy</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line-wrap"><span class="line-inner">Engineering</span></span>
+          <span class="line-wrap"><span class="line-inner">High-Impact</span></span>
+          <span class="line-wrap"><span class="line-inner glow-text">Digital</span></span>
+          <span class="line-wrap"><span class="line-inner glow-text">Experiences.</span></span>
+        </h1>
+
+        <div class="hero-bottom-grid">
+          <div class="hero-bio">
+            <div class="typewriter-box">
+              <span class="type-label">Specializing in:</span>
+              <span id="typewriter"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description">
+              Led by <strong>Vinayak Goyal</strong>, we build high-speed custom web applications, scalable business portals, and motion-rich digital solutions tailored to accelerate modern businesses.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="btn-primary magnetic">
+                <span>View Real-World Work</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn-secondary magnetic">
+                <span>Request Consultation</span>
+                <i class="fas fa-calendar-check"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-num">100%</div>
+              <div class="metric-label">Delivery Rate</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">06+</div>
+              <div class="metric-label">Production Web Systems Deployed</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-num">&lt;1.2s</div>
+              <div class="metric-label">Average Page Load Latency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="mouse-icon"><div class="wheel"></div></div>
+        <span>Explore Solutions</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ MARQUEE ═══════════════════════════ -->
+    <section class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>Enterprise Web Development</span><i class="fas fa-asterisk"></i>
+          <span>Full-Stack Architecture</span><i class="fas fa-asterisk"></i>
+          <span>Custom Gym & Fitness Portals</span><i class="fas fa-asterisk"></i>
+          <span>Solar & Renewable Energy Platforms</span><i class="fas fa-asterisk"></i>
+          <span>Interactive Motion UI</span><i class="fas fa-asterisk"></i>
+          <span>GSAP & Web Performance</span><i class="fas fa-asterisk"></i>
+          <span>REST APIs & Database Design</span><i class="fas fa-asterisk"></i>
+          <span>Cloud Deployment & SEO</span><i class="fas fa-asterisk"></i>
+          <!-- Duplicate for loop -->
+          <span>Enterprise Web Development</span><i class="fas fa-asterisk"></i>
+          <span>Full-Stack Architecture</span><i class="fas fa-asterisk"></i>
+          <span>Custom Gym & Fitness Portals</span><i class="fas fa-asterisk"></i>
+          <span>Solar & Renewable Energy Platforms</span><i class="fas fa-asterisk"></i>
+          <span>Interactive Motion UI</span><i class="fas fa-asterisk"></i>
+          <span>GSAP & Web Performance</span><i class="fas fa-asterisk"></i>
+          <span>REST APIs & Database Design</span><i class="fas fa-asterisk"></i>
+          <span>Cloud Deployment & SEO</span><i class="fas fa-asterisk"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+    <section id="services" class="services-section">
+      <div class="page-shell">
+        <div class="section-header reveal-up">
+          <div class="eyebrow-tag">
+            <span class="dot-accent"></span>
+            <span>01 / Core Capabilities</span>
+          </div>
+          <h2 class="section-title">Solutions Built for <em>Measurable Growth.</em></h2>
+          <p class="section-subtitle">We bridge the gap between bold design aesthetics and rock-solid software architecture to build platforms that convert visitors into loyal clients.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-box reveal-card" data-index="01">
+            <div class="service-top">
+              <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+              <span class="service-num">01</span>
+            </div>
+            <h3>Custom Web Application Development</h3>
+            <p>From complex business management workflows to customer-facing SaaS dashboards. Built with modern JavaScript (ES6+), React, Node.js, and optimized database backends.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> High-speed, responsive frontend UI</li>
+              <li><i class="fas fa-check"></i> REST API integrations & data synchronization</li>
+              <li><i class="fas fa-check"></i> Secure authentication & user state management</li>
             </ul>
-            <a href="#" class="cta-button">Request a Consult</a>
-        </nav>
-        <section class="hero-section" id="home">
-            <div class="hero-content">
-                <h1>Software Consultancy Service</h1>
-                <p>We provide innovative solutions to grow your business.</p>
-                <a href="#" class="cta-button">Read More</a>
-                <a href="#" class="cta-button">Request a Consult</a>
-            </div>
-        </section>
-    </header>
+          </article>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <i class="icon-launch"></i>
-            <h3>Software For Business</h3>
-            <p>Innovative solutions for launching your business successfully and a personalised Software to maintain and
-                run your businesss efficiently.</p>
+          <article class="service-box reveal-card" data-index="02">
+            <div class="service-top">
+              <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+              <span class="service-num">02</span>
+            </div>
+            <h3>Commercial & Industrial Portals</h3>
+            <p>Specialized enterprise web platforms for niche industries like solar energy consultancy, real estate, manufacturing, and technical service providers.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Interactive ROI & quote calculation engines</li>
+              <li><i class="fas fa-check"></i> Lead-generation funnels & booking engines</li>
+              <li><i class="fas fa-check"></i> Commercial project portfolio showcases</li>
+            </ul>
+          </article>
+
+          <article class="service-box reveal-card" data-index="03">
+            <div class="service-top">
+              <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+              <span class="service-num">03</span>
+            </div>
+            <h3>Fitness & Member Management Platforms</h3>
+            <p>Engaging digital ecosystems for gyms, fitness studios, and wellness clubs with workout tracking, class scheduling, and membership subscription tiers.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Dark-mode, high-energy interactive design</li>
+              <li><i class="fas fa-check"></i> Trainer profiles & program directories</li>
+              <li><i class="fas fa-check"></i> Automated contact & membership inquiries</li>
+            </ul>
+          </article>
+
+          <article class="service-box reveal-card" data-index="04">
+            <div class="service-top">
+              <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+              <span class="service-num">04</span>
+            </div>
+            <h3>Creative Motion UI & Brand Engineering</h3>
+            <p>Elevate your digital presence with award-winning motion aesthetics, micro-interactions, canvas shaders, and editorial typography that leave a lasting impression.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> GSAP + ScrollTrigger choreography</li>
+              <li><i class="fas fa-check"></i> 60fps frame-perfect native scroll mechanics</li>
+              <li><i class="fas fa-check"></i> Responsive design across all screen formats</li>
+            </ul>
+          </article>
         </div>
-        <div class="feature">
-            <i class="icon-support"></i>
-            <h3>Online Support Team</h3>
-            <p>Our team is available online to assist you 24/7.</p>
-        </div>
-        <div class="feature">
-            <i class="icon-time"></i>
-            <h3>Time Management</h3>
-            <p>Efficient time management strategies to streamline your operations.</p>
-        </div>
+      </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>Welcome to Software Consultancy Service, where code meets innovation.
-
-            We are a team of passionate developers, engineers, and problem-solvers who thrive on turning complex
-            challenges into clean, efficient, and scalable solutions. Whether you're just starting your coding journey
-            or you're a seasoned professional, we believe in the power of collaboration and open-source principles to
-            push the boundaries of what's possible.
-
-            Our goal is to empower coders like you by providing the tools, resources, and community support you need to
-            create, learn, and grow. From cutting-edge web development to robust software engineering, we’re here to
-            build the future—together.
-
-            At Software Consultancy Service, code is more than just lines on a screen—it’s the language that drives
-            innovation and shapes the world.
-
-            Join us, and let’s code the future.</p>
-        <a href="#" class="cta-button">Read More</a>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="service-cards">
-            <div class="service-card">
-                <img src="Images/User-experience-diagram.jpeg" alt="User Experience">
-                <h3>User Experience</h3>
+    <!-- ═══════════════════════════ REAL-WORLD WORK ═══════════════════════════ -->
+    <section id="work" class="work-section">
+      <div class="page-shell">
+        <div class="work-header-flex reveal-up">
+          <div>
+            <div class="eyebrow-tag">
+              <span class="dot-accent"></span>
+              <span>02 / Proven Track Record</span>
             </div>
-            <div class="service-card">
-                <img src="Images/creative-mind.jpg" alt="Creative Design">
-                <h3>Creative Design</h3>
-            </div>
-            <div class="service-card">
-                <img src="Images/coding.jpeg" alt="Developer">
-                <h3>Developer</h3>
-            </div>
+            <h2 class="section-title">Featured Real-World <em>Client Projects.</em></h2>
+          </div>
+          <div class="work-filters">
+            <button class="filter-btn active" data-filter="all">All Solutions</button>
+            <button class="filter-btn" data-filter="commercial">Commercial / Industry</button>
+            <button class="filter-btn" data-filter="fitness">Fitness & Web App</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack Platforms</button>
+          </div>
         </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Rudra Fitness Gym -->
+          <article class="project-card highlight-card reveal-project" data-category="fitness commercial fullstack">
+            <div class="project-media">
+              <img src="Images/rudra_gym.jpg" alt="Rudra Fitness Gym Website & Management Platform" />
+              <div class="project-overlay">
+                <div class="overlay-details">
+                  <span class="client-badge"><i class="fas fa-dumbbell"></i> Featured Client</span>
+                  <h4>Rudra Fitness Gym</h4>
+                  <p>Comprehensive Fitness & Member Engagement Web Platform</p>
+                  <a href="#contact" class="btn-overlay">Explore Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag-accent">Fitness Tech</span>
+                <span>Membership Portal</span>
+                <span>High-Motion UI</span>
+                <span>Responsive</span>
+              </div>
+              <h3>Rudra Fitness Gym — Modern Athletic Web Ecosystem</h3>
+              <p>Designed and engineered an ultra-dynamic, dark-mode web platform for Rudra Fitness Gym. Features custom workout program showcases, interactive trainer rosters, membership plan comparison calculators, and automated lead capture funnels for walk-in and online enrollments.</p>
+              <div class="project-footer">
+                <span class="deliverable"><i class="fas fa-check-circle"></i> Complete Web App UI + Lead Generation</span>
+                <span class="impact-stat">Boosted Member Inquiries</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Shri Radhe Corporation -->
+          <article class="project-card highlight-card reveal-project" data-category="commercial fullstack">
+            <div class="project-media">
+              <img src="Images/shri_radhe_solar.jpg" alt="Shri Radhe Corporation Solar Installation Platform" />
+              <div class="project-overlay">
+                <div class="overlay-details">
+                  <span class="client-badge"><i class="fas fa-sun"></i> Featured Client</span>
+                  <h4>Shri Radhe Corporation</h4>
+                  <p>Solar Installation & Renewable Energy Consultancy Platform</p>
+                  <a href="#contact" class="btn-overlay">Explore Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag-accent">Renewable Energy</span>
+                <span>Solar Consultancy</span>
+                <span>ROI Calculator</span>
+                <span>Corporate Portal</span>
+              </div>
+              <h3>Shri Radhe Corporation — Solar Energy & Consultancy Web Hub</h3>
+              <p>End-to-end web architecture for a leading solar installation and energy consultancy firm. Built with residential and commercial rooftop solar showcase galleries, client quote assessment workflows, subsidy guidance guides, and interactive energy savings estimators.</p>
+              <div class="project-footer">
+                <span class="deliverable"><i class="fas fa-check-circle"></i> Corporate Brand + Estimator Tools</span>
+                <span class="impact-stat">Enterprise Lead Channel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: NovaNectar Official Portal -->
+          <article class="project-card reveal-project" data-category="commercial">
+            <div class="project-media">
+              <img src="Images/project1.jpg" alt="NovaNectar Website" />
+              <div class="project-overlay">
+                <div class="overlay-details">
+                  <span class="client-badge"><i class="fas fa-briefcase"></i> Agency Project</span>
+                  <h4>NovaNectar Services</h4>
+                  <p>Corporate Multi-Section Web Portal</p>
+                  <a href="https://vinayakgoyal2208.github.io/Novanector-Website/" target="_blank" rel="noopener" class="btn-overlay">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Corporate</span>
+                <span>HTML5 / CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <h3>Novanector Official Web Portal</h3>
+              <p>Engineered a high-performance, mobile-optimized corporate web portal during NovaNectar tenure. Reduced asset payload and optimized rendering pipeline by 35%.</p>
+            </div>
+          </article>
+
+          <!-- Project 4: Soil Farming AI Agent -->
+          <article class="project-card reveal-project" data-category="fullstack">
+            <div class="project-media">
+              <img src="Images/project3.jpg" alt="Soil Farming AI Agent" />
+              <div class="project-overlay">
+                <div class="overlay-details">
+                  <span class="client-badge"><i class="fas fa-robot"></i> Full-Stack AI</span>
+                  <h4>Soil Farming Agent</h4>
+                  <p>Intelligent Agritech Assistant Platform</p>
+                  <a href="https://github.com/VinayakGoyal2208/Soil-farming-agent" target="_blank" rel="noopener" class="btn-overlay">View Code <i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Agritech</span>
+                <span>AI Logic</span>
+                <span>Full-Stack</span>
+              </div>
+              <h3>Soil Farming AI Agricultural Assistant</h3>
+              <p>Full-stack web application delivering automated soil nutrient evaluation and crop recommendation models for sustainable agriculture practices.</p>
+            </div>
+          </article>
+
+          <!-- Project 5: Order & Catering Management Suite -->
+          <article class="project-card reveal-project" data-category="fullstack commercial">
+            <div class="project-media">
+              <img src="Images/project4.jpg" alt="Order & Catering Suite" />
+              <div class="project-overlay">
+                <div class="overlay-details">
+                  <span class="client-badge"><i class="fas fa-utensils"></i> Business System</span>
+                  <h4>Order & Catering Suite</h4>
+                  <p>End-to-End Event & Inventory Platform</p>
+                  <a href="https://github.com/VinayakGoyal2208/Catering-Management-System" target="_blank" rel="noopener" class="btn-overlay">View Code <i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Node.js</span>
+                <span>REST API</span>
+                <span>SQL / DB</span>
+              </div>
+              <h3>Catering & Order Management System</h3>
+              <p>Scalable web platform managing complex event booking logistics, item inventory levels, and client billing records with realtime state updates.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Creative Digital Agency. All rights reserved.</p>
-    </footer>
+    <!-- ═══════════════════════════ ABOUT THE STUDIO ═══════════════════════════ -->
+    <section id="about" class="about-section">
+      <div class="page-shell about-layout">
+        <div class="about-lead-col reveal-left">
+          <div class="eyebrow-tag">
+            <span class="dot-accent"></span>
+            <span>03 / Leadership & Expertise</span>
+          </div>
+          <h2 class="section-title">Crafting Software With <em>Precision & Integrity.</em></h2>
 
+          <div class="lead-profile-card">
+            <div class="profile-meta">
+              <div class="avatar-ring">
+                <span>VG</span>
+              </div>
+              <div>
+                <h4>Vinayak Goyal</h4>
+                <p>Lead Engineer & Software Consultant</p>
+                <span class="edu-pill"><i class="fas fa-graduation-cap"></i> MCA Scholar (SMU) • BCA (GEHU)</span>
+              </div>
+            </div>
+            <p class="profile-quote">
+              "We don't just deliver templates; we engineer robust, scalable software assets that empower organizations like <strong>Rudra Fitness Gym</strong> and <strong>Shri Radhe Corporation</strong> to dominate their markets."
+            </p>
+          </div>
+        </div>
+
+        <div class="about-content-col reveal-right">
+          <div class="about-narrative">
+            <p>
+              At <strong>VG Studio</strong>, software engineering meets business intelligence. With professional experience spanning high-growth software firms (NovaNectar Services, Unified Mentor, Codsoft) and modern full-stack academic rigor, we treat every project as an essential business asset.
+            </p>
+            <p>
+              Whether you need an interactive client portal, a high-converting landing page, or a tailored management platform, we take care of the entire lifecycle — from UX wireframing and responsive coding to backend APIs and production cloud deployment.
+            </p>
+          </div>
+
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fas fa-bolt"></i></div>
+              <h5>Sub-Second Speed</h5>
+              <p>Clean code without unnecessary bloated frameworks ensures instant load times.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
+              <h5>Zero Technical Debt</h5>
+              <p>Maintainable architecture, accessible markup, and clear developer documentation.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fas fa-comments"></i></div>
+              <h5>Direct Collaboration</h5>
+              <p>Work directly with the lead engineer — no layers of confusing agency bureaucracy.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+              <h5>Conversion Focused</h5>
+              <p>Every CTA, visual hook, and layout is strategically designed to drive client inquiries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PROCESS ═══════════════════════════ -->
+    <section id="process" class="process-section">
+      <div class="page-shell">
+        <div class="section-header center reveal-up">
+          <div class="eyebrow-tag">
+            <span class="dot-accent"></span>
+            <span>04 / Transparent Workflow</span>
+          </div>
+          <h2 class="section-title">How We Bring Your <em>Vision to Life.</em></h2>
+          <p class="section-subtitle">A streamlined, 4-step delivery pipeline engineered to eliminate delays and ensure flawless execution.</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="step-card reveal-step" data-step="01">
+            <div class="step-badge">Phase 01</div>
+            <h4>Discovery & Blueprint</h4>
+            <p>We analyze your business goals, target audience, and feature requirements to map out the complete architectural blueprint and sitemap.</p>
+          </div>
+
+          <div class="step-card reveal-step" data-step="02">
+            <div class="step-badge">Phase 02</div>
+            <h4>Design & Motion Prototyping</h4>
+            <p>We craft high-fidelity UI designs with custom typography, bespoke color palettes, and motion choreographies for client approval.</p>
+          </div>
+
+          <div class="step-card reveal-step" data-step="03">
+            <div class="step-badge">Phase 03</div>
+            <h4>Full-Stack Development</h4>
+            <p>Clean, semantic coding of responsive frontend interfaces, REST API endpoints, database schemas, and interactive business logic.</p>
+          </div>
+
+          <div class="step-card reveal-step" data-step="04">
+            <div class="step-badge">Phase 04</div>
+            <h4>Testing, SEO & Launch</h4>
+            <p>Rigorous cross-browser testing, Core Web Vitals optimization, live domain configuration, and post-launch handover.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PACKAGES & CONSULTATION ═══════════════════════════ -->
+    <section id="pricing" class="pricing-section">
+      <div class="page-shell">
+        <div class="section-header reveal-up">
+          <div class="eyebrow-tag">
+            <span class="dot-accent"></span>
+            <span>05 / Engagement Models</span>
+          </div>
+          <h2 class="section-title">Flexible Packages Tailored to <em>Your Scale.</em></h2>
+          <p class="section-subtitle">Transparent engagement scopes with no hidden fees. Custom quotes are also provided for unique enterprise requirements.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card reveal-scale">
+            <div class="plan-header">
+              <span class="plan-type">Essential</span>
+              <h3>High-Impact Landing Page</h3>
+              <p class="plan-desc">Perfect for targeted marketing campaigns, product launches, or single-page business showcases.</p>
+            </div>
+            <ul class="plan-checklist">
+              <li><i class="fas fa-check"></i> Custom responsive single-page architecture</li>
+              <li><i class="fas fa-check"></i> GSAP scroll motion & micro-interactions</li>
+              <li><i class="fas fa-check"></i> Working AJAX contact / lead form</li>
+              <li><i class="fas fa-check"></i> On-page SEO & speed optimization</li>
+              <li><i class="fas fa-check"></i> Deployed on GitHub Pages or Netlify</li>
+            </ul>
+            <a href="#contact" class="btn-plan">Select Package</a>
+          </div>
+
+          <div class="pricing-card featured reveal-scale">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="plan-header">
+              <span class="plan-type">Business Growth</span>
+              <h3>Full-Scale Business Platform</h3>
+              <p class="plan-desc">Ideal for gyms, solar firms, service businesses, and agencies requiring multi-section platforms.</p>
+            </div>
+            <ul class="plan-checklist">
+              <li><i class="fas fa-check"></i> Multi-page or advanced section layout</li>
+              <li><i class="fas fa-check"></i> Custom calculators (e.g. Solar ROI, Gym tiers)</li>
+              <li><i class="fas fa-check"></i> Portfolio showcase & client reviews</li>
+              <li><i class="fas fa-check"></i> Advanced interactive motion & canvas graphics</li>
+              <li><i class="fas fa-check"></i> Priority support & analytics integration</li>
+            </ul>
+            <a href="#contact" class="btn-plan-featured">Select Package</a>
+          </div>
+
+          <div class="pricing-card reveal-scale">
+            <div class="plan-header">
+              <span class="plan-type">Enterprise</span>
+              <h3>Custom Full-Stack App</h3>
+              <p class="plan-desc">Tailor-made software systems, internal management tools, and database-driven portals.</p>
+            </div>
+            <ul class="plan-checklist">
+              <li><i class="fas fa-check"></i> Full-stack architecture (React / Node.js / DB)</li>
+              <li><i class="fas fa-check"></i> Custom admin dashboards & user portals</li>
+              <li><i class="fas fa-check"></i> REST API development & third-party hooks</li>
+              <li><i class="fas fa-check"></i> End-to-end database schema modeling</li>
+              <li><i class="fas fa-check"></i> Dedicated retainer & ongoing maintenance</li>
+            </ul>
+            <a href="#contact" class="btn-plan">Request Custom Scope</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CONTACT / CONSULTATION ═══════════════════════════ -->
+    <section id="contact" class="contact-section">
+      <div class="page-shell contact-layout">
+        <div class="contact-info-col reveal-left">
+          <div class="eyebrow-tag">
+            <span class="dot-accent"></span>
+            <span>06 / Get in Touch</span>
+          </div>
+          <h2 class="section-title">Let’s Engineer Your <em>Next Breakthrough.</em></h2>
+          <p class="contact-intro">
+            Have a project in mind, need a consultation for your business (gym, solar company, web app), or want to explore collaboration? Send us a message and we'll reply within 24 hours.
+          </p>
+
+          <div class="direct-channels">
+            <a href="mailto:vinayakgoyal2208@gmail.com" class="channel-card">
+              <div class="ch-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div>
+                <span class="ch-label">Email Us Directly</span>
+                <strong>vinayakgoyal2208@gmail.com</strong>
+              </div>
+            </a>
+
+            <a href="tel:+919410302461" class="channel-card">
+              <div class="ch-icon"><i class="fas fa-phone-volume"></i></div>
+              <div>
+                <span class="ch-label">Direct Phone / WhatsApp</span>
+                <strong>+91 9410302461</strong>
+              </div>
+            </a>
+
+            <div class="channel-card static">
+              <div class="ch-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <span class="ch-label">Location & Availability</span>
+                <strong>India • Available for Global Remote Projects</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-col reveal-right">
+          <div class="form-container">
+            <h3>Schedule a Consultation</h3>
+            <p>Tell us about your project requirements and goals.</p>
+
+            <form id="consult-form">
+              <input type="hidden" name="_subject" value="New VG Studio Consultation Request" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <div class="form-group">
+                <input type="text" id="c-name" name="name" placeholder=" " required />
+                <label for="c-name">Your Full Name *</label>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="c-email" name="email" placeholder=" " required />
+                <label for="c-email">Your Work Email *</label>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <select id="c-service" name="service" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="Gym/Fitness Web Platform">Gym / Fitness Web Platform</option>
+                    <option value="Solar / Energy Corporate Portal">Solar / Energy Corporate Portal</option>
+                    <option value="Custom Web Application">Custom Web Application</option>
+                    <option value="High-Impact Landing Page">High-Impact Landing Page</option>
+                    <option value="Full-Stack Engineering">Full-Stack Engineering</option>
+                    <option value="Other Consultation">Other Consultation</option>
+                  </select>
+                  <label for="c-service">Project Type *</label>
+                </div>
+
+                <div class="form-group">
+                  <select id="c-budget" name="budget">
+                    <option value="" disabled selected hidden></option>
+                    <option value="Flexible / Discuss First">Flexible / Discuss First</option>
+                    <option value="Tier 1 ($200 - $500)">Starter ($200 – $500)</option>
+                    <option value="Tier 2 ($500 - $1,500)">Growth ($500 – $1,500)</option>
+                    <option value="Tier 3 ($1,500+)">Enterprise ($1,500+)</option>
+                  </select>
+                  <label for="c-budget">Estimated Budget</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <textarea id="c-message" name="message" rows="4" placeholder=" " required></textarea>
+                <label for="c-message">Project Description & Timeline *</label>
+              </div>
+
+              <button type="submit" class="btn-submit magnetic">
+                <span>Submit Consultation Request</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="page-shell footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-mark">VG</span>
+          <span class="logo-text">Studio<span class="dot">.</span></span>
+        </a>
+        <p>Software Consultancy & Full-Stack Web Engineering led by Vinayak Goyal.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Client Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Packages</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h5>Connect</h5>
+        <div class="social-links">
+          <a href="https://github.com/VinayakGoyal2208" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinayak-goyal-888814221/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:vinayakgoyal2208@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2026 VG Studio (Vinayak Goyal). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="vendor/gsap/gsap.min.js"></script>
+  <script src="vendor/gsap/ScrollTrigger.min.js"></script>
+  <script src="script.js?v=20260815-4"></script>
 </body>
-
 </html>
