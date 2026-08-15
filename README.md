@@ -84,8 +84,7 @@ The consultation form is connected to `vinayakgoyal2208@gmail.com` via FormSubmi
 - **GitHub:** [@VinayakGoyal2208](https://github.com/VinayakGoyal2208)
 - **LinkedIn:** [Vinayak Goyal](https://www.linkedin.com/in/vinayak-goyal-888814221/)
 - **Email:** vinayakgoyal2208@gmail.com
-- **Phone / WhatsApp:** +91 9410302461
-
+  
 ---
 
 ## 📜 License
