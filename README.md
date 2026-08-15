@@ -1,6 +1,6 @@
 # VG Studio — Software Consultancy & Web Engineering Platform
 
-![VG Studio Banner](Images/rudra_gym.jpg)
+![VG Studio Banner](Images/home.png)
 
 A high-impact, conversion-focused software consultancy and web engineering landing platform built by **Vinayak Goyal**. Built with HTML5, CSS3, JavaScript (ES6+), and **GSAP 3.12.5 + ScrollTrigger** on top of native browser scrolling with zero scroll desync.
 
